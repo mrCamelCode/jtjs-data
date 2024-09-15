@@ -1,0 +1,29 @@
+{
+  "name": "@jtjs/data",
+  "version": "0.0.6",
+  "license": "MIT",
+  "description": "Data structures for use in any JS environment.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/jtjs_data.js",
+  "exports": {
+    ".": {
+      "import": "./dist/jtjs_data.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.5",
+    "happy-dom": "^15.7.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vitest": "^2.1.1"
+  }
+}
