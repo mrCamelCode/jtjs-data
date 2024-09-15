@@ -1,3 +1,7 @@
+# 0.0.7
+
+- Fix types not being bundled.
+
 # 0.0.6
 
 ## Breaking Changes
