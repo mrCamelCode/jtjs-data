@@ -1,6 +1,6 @@
 {
   "name": "@jtjs/data",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "description": "Data structures for use in any JS environment.",
   "type": "module",
