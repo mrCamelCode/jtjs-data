@@ -1,3 +1,7 @@
+# 0.0.8
+
+- Added `Cache`.
+
 # 0.0.7
 
 - Fix types not being bundled.
