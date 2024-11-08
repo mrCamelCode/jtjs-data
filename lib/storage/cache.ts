@@ -63,6 +63,17 @@ export class Cache<CacheValue, CacheEntryName extends string = string> {
   }
 
   /**
+   * Removes the specified entry from the cache.
+   *
+   * If an entry with the name doesn't exist, this is a no-op.
+   *
+   * @param name - The name of the entry to remove.
+   */
+  remove(name: CacheEntryName): void {
+    delete this.#cache[name];
+  }
+
+  /**
    * Removes all expired entries from the cache.
    *
    * Keep in mind that expired entries are automatically cleaned up as they're
@@ -86,6 +97,24 @@ export class Cache<CacheValue, CacheEntryName extends string = string> {
    */
   wipe(): void {
     this.#cache = {};
+  }
+
+  /**
+   * @returns The cache as an array of entries.
+   *
+   * @example
+   * ```ts
+   * const cache = new Cache<number>();
+   *
+   * const cacheEntries = cache.toArray();
+   *
+   * cacheEntries.forEach(([entryName, entryValue]) => console.log(`${entryName}: ${entryValue}`));
+   * ```
+   */
+  toArray(): [CacheEntryName, CacheValue][] {
+    return Object.entries(this.#cache)
+      .filter(([, entryValue]) => this.#isEntryValid(entryValue))
+      .map(([key, value]) => [key as CacheEntryName, value.value]);
   }
 
   #isEntryValid(entry: CacheEntry<CacheValue>): boolean {

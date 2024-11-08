@@ -1,3 +1,11 @@
+# 0.0.10
+
+- `toArray` no longer returns expired entries.
+
+# 0.0.9
+
+- Added `toArray` and `remove` methods to `Cache`.
+
 # 0.0.8
 
 - Added `Cache`.
