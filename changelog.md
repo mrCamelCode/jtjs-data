@@ -1,3 +1,7 @@
+# 0.0.12
+
+- Correct repo information.
+
 # 0.0.11
 
 - Add repo information.

@@ -1,12 +1,16 @@
 {
   "name": "@jtjs/data",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "MIT",
   "description": "Data structures for use in any JS environment.",
   "type": "module",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrCamelCode/jtjs-data.git"
+  },
   "module": "./dist/jtjs_data.js",
   "exports": {
     ".": {
