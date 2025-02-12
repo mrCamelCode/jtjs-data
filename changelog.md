@@ -1,3 +1,7 @@
+# 0.0.11
+
+- Add repo information.
+
 # 0.0.10
 
 - `toArray` no longer returns expired entries.
